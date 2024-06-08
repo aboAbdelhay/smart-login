@@ -75,38 +75,60 @@
       </div>
     </section>
     <!--!End Modal update-->
-<!-- ?start modal add new user -->
- <section>
-<div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="addUserModalLabel">Add New User</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- ?start modal add new user -->
+    <section>
+      <div
+        class="modal fade"
+        id="addUserModal"
+        tabindex="-1"
+        aria-labelledby="addUserModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addUserModalLabel">Add New User</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form id="addUserForm">
+                <div class="mb-3">
+                  <label for="addUserName" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="addUserName" />
+                </div>
+                <div class="mb-3">
+                  <label for="addUserEmail" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="addUserEmail" />
+                </div>
+                <div class="mb-3">
+                  <label for="addUserPassword" class="form-label"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="addUserPassword"
+                  />
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="saveAddUserBtn"
+                >
+                  Add User
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="modal-body">
-        <form id="addUserForm">
-          <div class="mb-3">
-            <label for="addUserName" class="form-label">Name</label>
-            <input type="text" class="form-control" id="addUserName" />
-          </div>
-          <div class="mb-3">
-            <label for="addUserEmail" class="form-label">Email</label>
-            <input type="email" class="form-control" id="addUserEmail" />
-          </div>
-          <div class="mb-3">
-            <label for="addUserPassword" class="form-label">Password</label>
-            <input type="password" class="form-control" id="addUserPassword" />
-          </div>
-          <button type="button" class="btn btn-primary" id="saveAddUserBtn">Add User</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
- </section>
-<!-- ?end modal add new user -->
+    </section>
+    <!-- ?end modal add new user -->
     <!-- *start header -->
     <header class="container-fluid box">
       <div class="container py-3">
@@ -126,12 +148,16 @@
     <main>
       <section>
         <div class="container box py-5 text-center my-5 w-50 m-auto">
-          <h2 class="admin">welcome , Ahmed Sayed Abdelhay</h2>
+          <h2 class="admin">Welcome , Ahmed Sayed Abdelhay</h2>
         </div>
       </section>
       <section>
         <div class="container text-center">
-          <button class="btn btn-success btnAddUser mb-4" data-bs-toggle="modal" data-bs-target="#addUserModal">
+          <button
+            class="btn btn-success btnAddUser mb-4"
+            data-bs-toggle="modal"
+            data-bs-target="#addUserModal"
+          >
             <i class="fa-solid fa-user-plus pe-2"></i> Add User
           </button>
           <table
