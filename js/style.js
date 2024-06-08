@@ -170,6 +170,28 @@ function display(arr) {
     });
   });
 }
+if (document.querySelector(".btnAddUser")) {
+  document.querySelector(".btnAddUser").addEventListener("click", function () {
+    document.getElementById("addUserName").value = "";
+    document.getElementById("addUserEmail").value = "";
+    document.getElementById("addUserPassword").value = "";
+  });
+}
+function saveNewUser() {
+  let userName = document.getElementById("addUserName").value;
+  let userEmail = document.getElementById("addUserEmail").value;
+  let userPassword = document.getElementById("addUserPassword").value;
+  let newUser = {
+    userName: userName,
+    email: userEmail,
+    password: userPassword
+  };
+  users.push(newUser);
+  localStorage.setItem("usersDetails", JSON.stringify(users));
+  display(users);
+  $("#addUserModal").modal("hide");
+}
+
 // !events click
 if (document.querySelector(".welcome")) {
   document.querySelector(".welcome").innerHTML =
@@ -187,4 +209,7 @@ if (document.querySelector("#mainTable")) {
     $("#updateModal").modal("hide");
   });
   display(users);
+}
+if (document.querySelector("#saveAddUserBtn")) {
+  document.querySelector("#saveAddUserBtn").addEventListener("click", saveNewUser);
 }
